@@ -15,7 +15,7 @@ def extract_first_digit(number):
     int
         Le premier chiffre du nombre, ou None si le nombre est vide ou nul.
     """
-    s = str(number).strip().lstrip('0').replace('.', '')
+    s = str(number).strip().replace('.', '').lstrip('-0')
     return int(s[0]) if s else None
 
 # Obtient la distribution réelle des premiers chiffres dans un jeu de données
